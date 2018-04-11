@@ -1,10 +1,15 @@
 
 public class Bike extends AbstractVehicule {
+	private type type;
 
-	@Override
-	public Position getPosition() {
-		// TODO Auto-generated method stub
-		return null;
+	public Bike(type type) {
+		super();
+		this.type = type;
+		
+	}
+
+	public void move() {
+
 	}
 
 }

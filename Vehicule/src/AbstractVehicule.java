@@ -5,6 +5,10 @@ public abstract class AbstractVehicule implements Vehicule {
 	private float east;
 	private float speed;
 	private Position pos;
+	private float poids;
+	private String marque;
+	private String couleur; 
+	private String modele;
 
 	public AbstractVehicule() {
 		north = 0.0F;
@@ -13,12 +17,16 @@ public abstract class AbstractVehicule implements Vehicule {
 		east = 0.0F;
 		speed = 0.0F;
 		pos= new Position();
+		couleur="";
+		modele="";
+		marque="";
+		poids=0.0F;
 	}
 
 	public Position getPosition() {
 		return this.pos;
 	}
-	public AbstractVehicule(float north, float south, float west, float east,float speed,Position pos) {
+	public AbstractVehicule(float north, float south, float west, float east,float speed,Position pos,float poids,String Marque,String Couleur,String Modele) {
 		this.north = north;
 		this.south = south;
 		this.west = west;

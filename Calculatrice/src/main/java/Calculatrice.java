@@ -10,14 +10,15 @@ public class Calculatrice {
 	 */
 
 	public static void main(String[] args) {
-		double num = 0;
-		double s = 0;
+		double num = 0.0;
+		double s = 0.0;
 		String nbr = null;
 		String o = "";
-		double num1 = 0;
-		double num2 = 0;
+		double num1 = 0.0;
+		double num2 = 0.0;
 		String stop="stop";
 
+		/** i do a "do...while" for create a repeat" */ 
 		do {
 		SelectNumber select = new SelectNumber(num, nbr, s, o);
 		num1 = select.selectNum();

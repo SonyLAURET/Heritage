@@ -16,13 +16,15 @@ public class Calculatrice {
 		String o = "";
 		double num1 = 0;
 		double num2 = 0;
+		String stop="stop";
 
+		do {
 		SelectNumber select = new SelectNumber(num, nbr, s, o);
 		num1 = select.selectNum();
 		select.selectOperator();
 		num2 = select.selectNum();
-		System.out.println("votre résultat est: " + select.showResult(num1, num2));
-
+		System.out.println("\nvotre résultat est: " + select.showResult(num1, num2));
+		}while((stop.equals("stop")));
 	}
 
 }

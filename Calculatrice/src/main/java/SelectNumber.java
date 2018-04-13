@@ -48,13 +48,18 @@ public class SelectNumber {
 
 	}
 
+	/** I have to cut my code on many unties for do test */ 
 	public double showResult(double num1, double num2) {
 		if (operator.equals("+")) {
 			return num1 + num2;
 		} else if (operator.equals("-")) {
 			return num1 - num2;
 		} else if (operator.equals("/")) {
-			return num1 / num2;
+			if (num2 == 0) {
+				System.out.println("vous ne pouvez diviser par 0");
+			} else {
+				return num1 / num2;
+			}
 		} else if (operator.equals("*")) {
 			return num1 * num2;
 		}

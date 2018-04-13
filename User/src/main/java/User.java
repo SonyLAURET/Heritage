@@ -1,5 +1,5 @@
 
-public class User implements Comparable {
+public class User implements Comparable<Object> {
 
 	private String name;
 	private int age;
@@ -45,5 +45,4 @@ public class User implements Comparable {
 	}
 
 	
-
 }

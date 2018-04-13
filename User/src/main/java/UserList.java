@@ -8,7 +8,7 @@ public class UserList {
 		/**
 		 * we initialize the constructor and enter the data in the list with user.add.
 		 */
-		ArrayList<User> users = new ArrayList();
+		ArrayList<User> users = new ArrayList<User>();
 		User u1 = new User("Alexia", 26, false);
 		users.add(u1);
 		User u2 = new User("Alex", 12, true);
@@ -35,11 +35,41 @@ public class UserList {
 		 * we use users.size for had the number of element in tab. users.get(index) take
 		 * the element with the index of user.
 		 */
+
+		printer(users);
+		System.out.println(users.size());
+		suppOld(users);
+
+		System.out.print("\n supprimons les vieux et cela donne: \n");
+		printer(users);
+
+	}
+
+	private static void suppOld(ArrayList<User> users) {
 		for (int i = 0; i < users.size(); i++) {
-			System.out.println(users.get(i).toString());
+			System.out.println("test");
+			if ((users.get(i)).getAge() < 20) {
+
+				// effet de bords présent du la boucle for. 
+				// quand on en supprime un, l'indexation change sans prendre en considération la suppression.
+				//plutôt utiliser iterator.
+				users.remove(i);
+
+			}
+			
 
 		}
 
 	}
+	
+	private static void suppOldIterator() {
+		
+	}
 
+	public static void printer(ArrayList<User> users) {
+		for (int i = 0; i < users.size(); i++) {
+			System.out.println(users.get(i).toString());
+
+		}
+	}
 }

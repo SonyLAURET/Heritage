@@ -1,5 +1,5 @@
 
-public class User {
+public class User implements Comparable {
 
 	private String name;
 	private int age;
@@ -39,6 +39,11 @@ public class User {
 		return "name=" + name + ", age=" + age + ", isMale=" + isMale;
 	}
 	
+	
+	public int compareTo(Object user) {		
+		return this.getName().compareToIgnoreCase(((User) user).getName());
+	}
+
 	
 
 }
